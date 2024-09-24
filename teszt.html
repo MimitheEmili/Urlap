@@ -8,95 +8,74 @@
 </head>
 <style>
     /* styles.css */
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
     .sidebar {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 50px;
-        height: 100%;
-        background-color: #333;
-        transition: width 0.3s;
-        overflow-x: hidden;
-        white-space: nowrap;
-    }
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background-color: #333;
+    transition: width 0.3s;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
 
-    .sidebar .menu-item {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        color: white;
-        cursor: pointer; /* Hozzáadott kurzor megváltoztatása */
-        transition: padding 0.3s; /* Átmenet a padding változásához */
-        position: relative; /* Relatív pozíció a dropdown nyíl pozícionálásához */
-    }
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+}
 
-    .sidebar .menu-item:hover {
-        padding-left: 20px; /* Hover esetén növelje a bal padding méretét */
-    }
+.icon {
+    margin-right: 10px;
+}
 
-    .sidebar .icon {
-        font-size: 24px;
-    }
+.menu-text {
+    visibility: hidden;  /* Kezdetben a szöveg rejtve */
+    white-space: nowrap;  /* Ne törje meg a szöveget */
+}
 
-    .sidebar .text {
-        margin-left: 10px;
-        display: none;
-    }
+.sidebar:hover {
+    width: 200px;  /* Oldalsáv szélesebb lesz */
+}
 
-    .sidebar.expanded {
-        width: 200px;
-    }
+.sidebar:hover .menu-text {
+    visibility: visible;  /* Szöveg megjelenik */
+}
 
-    .sidebar.expanded .text {
-        display: inline;
-    }
-
-    .dropdown-arrow {
-        position: absolute;
-        top: 50%;
-        right: -20px; /* Jobbra pozícionálás */
-        transform: translateY(-50%);
-        width: 0;
-        height: 0;
-        border-top: 6px solid transparent;
-        border-bottom: 6px solid transparent;
-        border-left: 6px solid white; /* Nyíl megjelenítése */
-        display: none; /* Alapértelmezett rejtett állapot */
-    }
-
-    .menu-item:hover .dropdown-arrow {
-        display: block; /* Hover esetén megjelenítés */
-    }
 </style>
 <body>
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar">
         <div class="menu-item">
-            <span class="icon">🏠</span>
-            <span class="text">Home</span>
-            <div class="dropdown-arrow"></div> <!-- Dropdown nyíl -->
+          <i class="icon">&#9733;</i> <!-- Csillag ikon példaként -->
+          <span class="menu-text">Kezdőlap</span>
         </div>
         <div class="menu-item">
-            <span class="icon">📄</span>
-            <span class="text">Documents</span>
-            <div class="dropdown-arrow"></div> <!-- Dropdown nyíl -->
+          <i class="icon">&#9733;</i>
+          <span class="menu-text">Profil</span>
         </div>
         <div class="menu-item">
-            <span class="icon">📧</span>
-            <span class="text">Email</span>
-            <div class="dropdown-arrow"></div> <!-- Dropdown nyíl -->
+          <i class="icon">&#9733;</i>
+          <span class="menu-text">Beállítások</span>
         </div>
-        <div class="menu-item">
-            <span class="icon">⚙️</span>
-            <span class="text">Settings</span>
-            <div class="dropdown-arrow"></div> <!-- Dropdown nyíl -->
-        </div>
-    </div>
+      </div>
+      
 
-    <script src="script.js"></script> <!-- JavaScript fájl hivatkozás -->
+    <script>function generatePassword() {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
+        let password = '';
+        const passwordLength = 12; // Állítsd be a kívánt jelszó hosszát
+    
+        for (let i = 0; i < passwordLength; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            password += characters.charAt(randomIndex);
+        }
+    
+        document.getElementById('jelszo').value = password; // A generált jelszó beírása a mezőbe
+    }
+    </script> <!-- JavaScript fájl hivatkozás -->
 </body>
 </html>

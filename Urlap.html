@@ -3,30 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons8-registration-64.png" type="image/x-icon">
     <title>Űrlap</title>
     <link rel="stylesheet" href="Urlap.css">
     <script src="Urlap.js"></script>
 </head>
 <body>
-    <div class="Sidebar">
-        <div class="menuitem">
-            <a href="">Fő oldal</a>
-        </div>
-        <a href="">Regisztráció</a>
-        <a href="">Belépés</a>
-        <a href="">Spaceholder</a>
-    </div>
     <div>
-        <h1>Regisztráció</h1>
-        <label>Név:</label>
-        <input type="text">
-        <label>Email:</label>
-        <input type="text">
-        <label>Jelszó:</label>
-        <input type="text">
-        <label>Életkor:</label>
-        <input type="datetime">
-        <label>Neme:</label>
+        <div class="Sidebar">
+            <div class="menu-item">
+                <i class="icon">🏠</i>
+                <span class="menu-text">Kezdőlap</span>
+              </div>
+              <div class="menu-item">
+                <i class="icon">📝 </i>
+                <span class="menu-text">Regisztráció</span>
+              </div>
+              <div class="menu-item">
+                <i class="icon">🖊</i>
+                <span class="menu-text">Belépés</span>
+              </div>
+    </div>
+        <div class="nagydiv">
+            <div class="belsodiv">
+                <h1 class="regist">Regisztráció</h1>
+                <img src="icons8-registration-50.png" alt="Név ikon" class="texticon">
+                <input class="bemenet" name="Nev" placeholder="Írja be a nevét" type="text">
+                <img src="icons8-email-50.png" alt="Név ikon" class="texticon">
+                <input class="bemenet" name="Email" placeholder="Írja be az email-t" type="text">
+                <img src="icons8-password-50.png" alt="Név ikon" class="texticon">
+                <input class="bemenet" name="Jelszo" id="jelszo" placeholder="Írja be a jelszót" type="text">
+                <button class="jelszo gomb"  onclick="Passwordonclick()">Random jelszó generálása</button>
+                <img src="icons8-age-50.png" alt="Név ikon" class="texticon">
+                <select name="age" class="bemenet">
+                    <option value="" disabled selected>Válassz életkort</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-30">26-30</option>
+                    <option value="31-40">31-40</option>
+                    <option value="41-50">41-50</option>
+                    <option value="51-60">51-60</option>
+                    <option value="61-70">61-70</option>
+                    <option value="71-80">71-80</option>
+                    <option value="81-90">81-90</option>
+                    <option value="91-">91-</option>
+                </select>
+                <div class="gender-selection">
+                    <img src="icons8-gender-50.png" alt="Négy ikon" class="texticon">
+                    <div class="radio-group">
+                        <input type="radio" name="gender" id="no" value="no">
+                        <label class="radiochoice" for="no">Nő</label>
+                        
+                        <input type="radio" name="gender" id="ferfi" value="ferfi">
+                        <label class="radiochoice" for="ferfi">Férfi</label>
+                    </div>
+                </div>
+                <button class="gomb" onclick="Regisztracioonclick()">Regisztráció</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

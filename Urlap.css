@@ -2,10 +2,112 @@
 
 body{
     font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(to right, #08c1ff, #ff36f2,#ba1ef3,#ff36f2,#08c1ff);
+}
+
+/*Sidebar és a menuitemek*/
+
+.menuitem{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Vízszintesen is középre igazítja az elemeket */
+    padding: 10px;
+    font-size: 20px;
+    height: 50px;
+    white-space: nowrap;
+}
+
+.menu-text{
+    visibility: hidden;
+    font-size: 20px;
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+    width: 100%;  
+}
+
+.Sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    transition: width 0.3s;
+    overflow-x: hidden;
+    white-space: nowrap;
+    flex-direction: column;
+}
+
+.Sidebar:hover {
+    width: 150px;
+}
+
+.Sidebar:hover .menu-text{
+    visibility: visible;
+}
+
+.icon{
+    
+    font-size: 30px;
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+/*Body rész*/
+
+.nagydiv{
+    display: flex;
+    justify-content: center;
+}
+
+.belsodiv{
+    width: 300px;
+    height: auto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: auto;
+    padding: 10px;
+    border-radius: 15%;
+    
+
+}
+
+/*Szöveg és icon formázás*/
+
+.regist{
+    text-decoration: underline;
+    font-size: 40px;
 }
 
 
-.Sidebar{
-    background-color: aqua;
-
+.bemenet{
+    margin-bottom: 15px;
+    height: 30px;
+    width: 200px;
 }
+
+.radiochoice{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.gender-selection {
+    display: flex; /* Flexbox aktiválása */
+    align-items: center;
+}
+.gomb{
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: rgb(8, 193, 255, 0);
+    height: 30px;
+}
+
+
+
