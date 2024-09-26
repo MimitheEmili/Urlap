@@ -2,7 +2,7 @@
 
 body{
     font-family: 'Courier New', Courier, monospace;
-    background: linear-gradient(to right, #08c1ff, #ff36f2,#ba1ef3,#ff36f2,#08c1ff);
+    background: linear-gradient(to right, #08c1ff, #ff36f2,#f3491ecb,#ff36f2,#08c1ff);
 }
 
 /*Sidebar és a menuitemek*/
@@ -62,6 +62,7 @@ body{
 .nagydiv{
     display: flex;
     justify-content: center;
+    
 }
 
 .belsodiv{
@@ -72,7 +73,7 @@ body{
     align-items: center;
     background-color: rgba(255, 255, 255, 0.4);
     width: auto;
-    padding: 10px;
+    padding: 100px;
     border-radius: 15%;
     
 
