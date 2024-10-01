@@ -47,6 +47,9 @@ body{
 .Sidebar:hover .menu-text{
     visibility: visible;
 }
+.Sidebar:hover .icon{
+    visibility: hidden;
+}
 
 .icon{
     
@@ -72,8 +75,7 @@ body{
     display: flex;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.4);
-    width: auto;
-    padding: 100px;
+    padding: 35px;
     border-radius: 15%;
     
 
@@ -83,7 +85,7 @@ body{
 
 .regist{
     text-decoration: underline;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 
@@ -99,7 +101,7 @@ body{
 }
 
 .gender-selection {
-    display: flex; /* Flexbox aktiválása */
+    display: flex; 
     align-items: center;
 }
 .gomb{
@@ -110,5 +112,15 @@ body{
     height: 30px;
 }
 
+#foglalkozas{
+    margin-top: 10px;
+}
 
+img{
+    width: 30px;
+    height: auto;
+}
 
+#age{
+    margin-top: 10px;
+}
