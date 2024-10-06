@@ -3,79 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icons8-registration-64.png" type="image/x-icon">
+    <title>Űrlap</title>
+    <link rel="stylesheet" href="Urlap.css">
+    <script src="Urlap.js"></script>
 </head>
-<style>
-    /* styles.css */
-    .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 50px;
-    height: 100%;
-    background-color: #333;
-    transition: width 0.3s;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.menu-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    color: white;
-    font-size: 18px;
-}
-
-.icon {
-    margin-right: 10px;
-}
-
-.menu-text {
-    visibility: hidden;  /* Kezdetben a szöveg rejtve */
-    white-space: nowrap;  /* Ne törje meg a szöveget */
-}
-
-.sidebar:hover {
-    width: 200px;  /* Oldalsáv szélesebb lesz */
-}
-
-.sidebar:hover .menu-text {
-    visibility: visible;  /* Szöveg megjelenik */
-}
-
-</style>
 <body>
-    <div class="sidebar">
-        <div class="menu-item">
-          <i class="icon">&#9733;</i> <!-- Csillag ikon példaként -->
-          <span class="menu-text">Kezdőlap</span>
+    <div>
+        <div class="Sidebar">
+            <div class="menu-item">
+                <i class="icon">🏠</i>
+                <span class="menu-text">Kezdőlap</span>
+              </div>
+              <div class="menu-item">
+                <i class="icon">📝 </i>
+                <span class="menu-text">Regisztráció</span>
+              </div>
+              <div class="menu-item">
+                <i class="icon">🖊</i>
+                <span class="menu-text">Belépés</span>
+              </div>
+    </div>
+        <div class="nagydiv">
+            <div class="belsodiv">
+                <h1 class="regist">Regisztráció</h1>
+                <img src="icons8-registration-50.png" alt="Név ikon" class="texticon">
+                <input class="bemenet" name="Nev" placeholder="Írja be a nevét" type="text">
+                <img src="icons8-email-50.png" alt="email ikon" class="texticon">
+                <input class="bemenet" name="Email" placeholder="Írja be az email-t" type="text">
+                <img src="icons8-password-50.png" alt="jelszo ikon" class="texticon">
+                <input class="bemenet" name="Jelszo" id="jelszo" placeholder="Írja be a jelszót" type="text">
+                <button class="jelszo gomb"  onclick="Passwordonclick()">Random jelszó generálása</button>
+                <img src="icons8-profession-50.png" alt="foglalkozas" class="texticon" id="foglalkozas" >
+                <input class="bemenet" name="foglalkozas" id="foglalkozas" placeholder="Írja be foglalkozását" type="text">
+                <img src="icons8-age-50.png" alt="eletkor ikon" class="texticon" id="age">
+                <select name="age" class="bemenet">
+                    <option value="" disabled selected>Válassz életkort</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-30">26-30</option>
+                    <option value="31-40">31-40</option>
+                    <option value="41-50">41-50</option>
+                    <option value="51-60">51-60</option>
+                    <option value="61-70">61-70</option>
+                    <option value="71-80">71-80</option>
+                    <option value="81-90">81-90</option>
+                    <option value="91-">91-</option>
+                </select>
+                <div class="gender-selection">
+                    <img src="icons8-gender-50.png" alt="Négy ikon" class="texticon">
+                    <div class="radio-group">
+                        <input type="radio" name="gender" id="no" value="no">
+                        <label class="radiochoice" for="no">Nő</label>
+                        
+                        <input type="radio" name="gender" id="ferfi" value="ferfi">
+                        <label class="radiochoice" for="ferfi">Férfi</label>
+                    </div>
+                </div>
+                <button class="gomb" onclick="Regisztracioonclick()">Regisztráció</button>
+                
+            </div>
         </div>
-        <div class="menu-item">
-          <i class="icon">&#9733;</i>
-          <span class="menu-text">Profil</span>
-        </div>
-        <div class="menu-item">
-          <i class="icon">&#9733;</i>
-          <span class="menu-text">Beállítások</span>
-        </div>
-      </div>
-      
-
-    <script>function generatePassword() {
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
-        let password = '';
-        const passwordLength = 12; // Állítsd be a kívánt jelszó hosszát
+    </div>
     
-        for (let i = 0; i < passwordLength; i++) {
-            const randomIndex = Math.floor(Math.random() * characters.length);
-            password += characters.charAt(randomIndex);
-        }
-    
-        document.getElementById('jelszo').value = password; // A generált jelszó beírása a mezőbe
-    }
-    </script> <!-- JavaScript fájl hivatkozás -->
 </body>
 </html>

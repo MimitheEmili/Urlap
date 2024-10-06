@@ -6,6 +6,7 @@ function Regisztracioonclick() {
     const email = document.querySelector('input[name="Email"]').value;
     const password = document.getElementById('jelszo').value;
     const profession = document.querySelector('input[name="foglalkozas"]').value;
+    const agazat = document.querySelector('select[name="agazat"]').value;
     const age = document.querySelector('select[name="age"]').value;
     const gender = document.querySelector('input[name="gender"]:checked') ? 
                    document.querySelector('input[name="gender"]:checked').value : '';
@@ -16,6 +17,7 @@ function Regisztracioonclick() {
         email: email,
         password: password,
         profession: profession,
+        agazat: agazat,
         age: age,
         gender: gender
     };
