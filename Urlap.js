@@ -26,7 +26,7 @@ function Regisztracioonclick() {
     alert('A regisztrációs adatok sikeresen elmentve!');
 }
 
-
+/*Jelszó generálás*/ 
 
 function Passwordonclick() {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+'; //a karakter lista

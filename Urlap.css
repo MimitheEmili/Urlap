@@ -65,6 +65,8 @@ body{
 .nagydiv{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .belsodiv{
@@ -76,26 +78,26 @@ body{
     background-color: rgba(255, 255, 255, 0.4);
     padding: 25px;
     border-radius: 15%;
-    
-
+    border: 1px solid #ccc; /* Opcionális: keret az űrlap körül */
 }
 
 /*Szöveg és icon formázás*/
 
 .regist{
     text-decoration: underline;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 
 .bemenet{
     margin-bottom: 15px;
-    height: 30px;
-    width: 200px;
+    height: 40px;
+    width: 210px;
+    font-size: 20px;
 }
 
 .radiochoice{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -108,13 +110,25 @@ body{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     background-color: rgb(8, 193, 255, 0);
-    height: 30px;
+    height: 40px;
+}
+
+.register{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
 }
 
 .jelszo{
     margin-bottom: 15px;
+    font-size: 17px;
 }
 
+#agazatok{
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+}
 
 /*ICON formázások*/
 
@@ -125,4 +139,8 @@ img{
 
 .texticon{
     margin-bottom: 5px;
+}
+
+#age{
+    margin-top: 10px;
 }
